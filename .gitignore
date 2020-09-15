@@ -1,7 +1,8 @@
-*.pyc
-.project
-.idea
 **/env
 env/
 env
+*.pyc
+.project
+.idea
+
 
