@@ -3,7 +3,7 @@ import requests
 import json
 from datetime import datetime
 from utility_method import prime_number_utility
-from Constants import API_KEY
+from constants import API_KEY
 app = Flask(__name__)
 
 
