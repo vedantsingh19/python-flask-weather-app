@@ -1,9 +1,16 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,abort
 import requests
 import json
 from datetime import datetime
 from utility_method import prime_number_utility
 from constants import API_KEY
+
+
+"""
+def extracting_weather_data_by_cityname()--This methods extract weather data
+on basis of city name and will return if day is prime number.
+"""
+
 app = Flask(__name__)
 
 
@@ -29,7 +36,8 @@ def extracting_weather_data_by_cityname():
             return data
         else:
             return 'Date is not prime so no date'
-
+    else:
+        abort(401)
 
 if __name__ == '__main__':
     app.run()
